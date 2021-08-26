@@ -1,0 +1,27 @@
+
+.map{
+    width: 100%;
+    height: calc(100vh - 50vh);
+}
+
+.card {
+    width: 8rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+.cardLabel {
+    width: max-content;
+    color: tomato;
+    font-size: 8px;
+    border-bottom: 0.5px solid tomato;
+    margin: 3px 0;
+}
+.cardText {
+    width: max-content;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: 600;
+}
