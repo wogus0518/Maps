@@ -1,7 +1,7 @@
 
 .map{
     width: 100%;
-    height: calc(100vh - 50vh);
+    height: calc(100vh - 20vh);
 }
 
 .card {
@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  
+}
+
 .cardLabel {
     width: max-content;
     color: tomato;

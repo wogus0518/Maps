@@ -13,7 +13,7 @@ function Map({ pins }) {
         height: "100%",
         latitude: 37.32,
         longitude: 127.08,
-        zoom: 8
+        zoom: 6
     });
 
     return (
