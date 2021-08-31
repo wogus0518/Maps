@@ -11,7 +11,9 @@ export default function Topbar({isLoggedIn}){
     return(
         <div className='topbarContainer'>
             <div className="topbarLeft">
-                <span className='logo'>FlosMap</span>
+                <NavLink to = "/" className="topbarLink">
+                    <span className='logo'>FlosMap</span>
+                </NavLink>
             </div>
             <div className="topbarRight">
                 <div className="topbarLinks">
@@ -19,7 +21,7 @@ export default function Topbar({isLoggedIn}){
                         isLoggedIn ? (
                             <>
                                 <span className="topbarLink" onClick={onLogOutClick}>Log Out</span>
-                                <NavLink to = "/input"  className="topbarLink">
+                                <NavLink to = "/selectYoutuber"  className="topbarLink">
                                     <span className="topbarLink" >Register</span>
                                 </NavLink>
                             </>

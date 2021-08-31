@@ -1,7 +1,7 @@
 
 .map{
     width: 100%;
-    height: calc(100vh - 20vh);
+    height: calc(100vh - 10vh);
 }
 
 .card {

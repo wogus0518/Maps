@@ -1,13 +1,13 @@
 .footerContainer{
     width: 100%;
     position: absolute;
-
-    left: 0;}
+    left: 0;
+}
 
 .footer{
     font-family: 'Noto Sans KR', sans-serif;
     color: grey;
-    background: rgb(255,180,224,0.2);
+    background: rgb(0,0,0);
     padding-top: 6px;
     padding-bottom: 4px;
     display: flex;

@@ -1,6 +1,6 @@
 import "./home.css"
 import Topbar from "../../components/topbar/Topbar.jsx";
-import ReactGoogleMaps from "../../components/map/ReactGoogleMaps.jsx";
+import ReactGoogleMaps from "../../components/map/Maps.jsx";
 import Filter from "../../components/filter/Filter.jsx";
 import { useState, useEffect } from 'react';
 import fire from "../../firebaseInit";
@@ -38,8 +38,6 @@ function Home({ isLoggedIn }) {
           setYoutuberFilterResult={setYoutuberFilterResult}
           setCategoryFilterResult={setCategoryFilterResult}
           />
-          {youtuberFilterResult}<br/>
-          {categoryFilterResult}
         <ReactGoogleMaps
           pins={pins}
           />
