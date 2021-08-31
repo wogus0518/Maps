@@ -1,43 +1,41 @@
 import "./topbar.css"
-// import {Person, Search, Chat, Notifications} from "@material-ui/icons"
+import firebase from "../../firebaseInit";
+import { useHistory, NavLink } from "react-router-dom";
 
-export default function Topbar(){
+export default function Topbar({isLoggedIn}){
+    const history = useHistory();
+    const onLogOutClick = () => {
+        firebase.auth().signOut();
+        history.push("/");
+      };
     return(
         <div className='topbarContainer'>
             <div className="topbarLeft">
                 <span className='logo'>FlosMap</span>
             </div>
-            {/* <div className="topbarCenter">
-                <div className="searchbar">
-                    <Search className='searchIcon'/>
-                    <input placeholder="Search for friend, post or video" className="searchInput" />
-                </div>
-            </div> */}
-            {/* <div className="topbarRight">
+            <div className="topbarRight">
                 <div className="topbarLinks">
-                    <span className="topbarLink">Homepage</span>
-                    <span className="topbarLink">Timeline</span>
+                    {
+                        isLoggedIn ? (
+                            <>
+                                <span className="topbarLink" onClick={onLogOutClick}>Log Out</span>
+                                <NavLink to = "/input"  className="topbarLink">
+                                    <span className="topbarLink" >Register</span>
+                                </NavLink>
+                            </>
+                        ) : (
+                                <>
+                                    <NavLink to = "/login" className="topbarLink">
+                                        <span className="topbarLink" >Sign IN</span>
+                                    </NavLink>
+                                    <NavLink to = "/register" className="topbarLink">
+                                        <span className="topbarLink" >Sign UP</span>
+                                    </NavLink>
+                                </>
+                        )
+                    }
                 </div>
-                <div className="topbarIcons">
-                    <div className="topbarIconItem">
-                        <Person/>
-                        <span className="topbarIconBadge">1</span>
-                    </div>
-                </div>
-                <div className="topbarIcons">
-                    <div className="topbarIconItem">
-                        <Chat/>
-                        <span className="topbarIconBadge">2</span>
-                    </div>
-                </div>
-                <div className="topbarIcons">
-                    <div className="topbarIconItem">
-                        <Notifications/>
-                        <span className="topbarIconBadge">1</span>
-                    </div>
-                </div>
-                <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
-            </div> */}
+            </div>
         </div>
     )
 }

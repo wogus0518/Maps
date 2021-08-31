@@ -1,12 +1,12 @@
 import "./home.css"
 import Topbar from "../../components/topbar/Topbar.jsx";
-import Map from "../../components/map/Map.jsx";
+import ReactGoogleMaps from "../../components/map/ReactGoogleMaps.jsx";
 import Filter from "../../components/filter/Filter.jsx";
 import { useState, useEffect } from 'react';
 import fire from "../../firebaseInit";
 const db = fire.firestore();
 
-function Home() {
+function Home({ isLoggedIn }) {
   let [youtuberFilterResult, setYoutuberFilterResult] = useState([]);
   let [categoryFilterResult, setCategoryFilterResult] = useState([]);
   let [pins, setPins] = useState([]);
@@ -32,7 +32,7 @@ function Home() {
   }, [categoryFilterResult])
   return(
     <div>
-      <Topbar/>
+      <Topbar isLoggedIn={isLoggedIn}/>
       <div className="homeContainer">
         <Filter 
           setYoutuberFilterResult={setYoutuberFilterResult}
@@ -40,7 +40,7 @@ function Home() {
           />
           {youtuberFilterResult}<br/>
           {categoryFilterResult}
-        <Map
+        <ReactGoogleMaps
           pins={pins}
           />
       </div>

@@ -23,7 +23,6 @@ function Map({ pins }) {
                 {...viewport}
                 mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
                 onViewportChange={nextViewport => setViewport(nextViewport)}
-                mapStyle="mapbox://styles/jaehyunjeung/cksrker54r95317p6sdb4wss5"
             >
                 {
                     pins.map((pin, i) => (

@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import fire from "../../firebaseInit";
 const db = fire.firestore();
 
-function Input() {
+function Input({isLoggedIn}) {
     const latitude = useRef();
     const longitude = useRef();
     const address = useRef();
@@ -42,7 +42,7 @@ function Input() {
     }
     return (
         <div>
-            <Topbar/>
+            <Topbar isLoggedIn={isLoggedIn}/>
             <div className="formContainer">
                 <form onSubmit={onSubmit} className="inputGroup">
                     <h1 className="title">장소 등록</h1>

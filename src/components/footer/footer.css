@@ -1,0 +1,59 @@
+.footerContainer{
+    width: 100%;
+    position: absolute;
+
+    left: 0;}
+
+.footer{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: grey;
+    background: rgb(255,180,224,0.2);
+    padding-top: 6px;
+    padding-bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .footerLeft{
+    flex:1;
+    text-align: right;
+    padding-right: 2rem;
+} */
+.footerCenter{
+    flex: 10;
+    padding-left: 1rem;
+}
+.info{
+    display: flex;
+    align-items: center;
+
+}
+.footerRight{
+    flex:4;
+}
+.iconLabel{
+    font-size: 0.1rem;
+}
+.info{
+    height:50px;
+    font-size: 0.6rem;
+    padding:0px;
+    text-align: left;
+    border-right : 1px solid white;
+}
+.snsIcon{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 1rem;
+    width: 1rem;
+}
+.iconContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
